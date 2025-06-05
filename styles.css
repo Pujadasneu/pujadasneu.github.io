@@ -1,12 +1,4 @@
-.publication-title a {
-    color: #1f2937;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.publication-title a:hover {
-    color: #2563eb;
-}* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -481,6 +473,16 @@ html {
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 0.5rem;
+}
+
+.publication-title a {
+    color: #1f2937;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publication-title a:hover {
+    color: #2563eb;
 }
 
 .publication-journal {
