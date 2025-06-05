@@ -853,3 +853,94 @@ html {
         align-items: center;
     }
 }
+/* GIS Section */
+.gis {
+    background: #f8fafc;
+}
+
+.gis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gis-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.gis-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gis-icon {
+    flex-shrink: 0;
+}
+
+.gis-icon i {
+    font-size: 2.5rem;
+    color: #059669;
+}
+
+.gis-content {
+    flex: 1;
+}
+
+.gis-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+}
+
+.gis-description {
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.gis-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.gis-type {
+    color: #059669;
+    font-weight: 600;
+}
+
+.gis-date {
+    color: #6b7280;
+}
+
+.gis-link {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.gis-link:hover {
+    color: #047857;
+}
+
+/* Responsive Design for GIS */
+@media (max-width: 768px) {
+    .gis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gis-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
