@@ -109,7 +109,7 @@ const statsObserver = new IntersectionObserver((entries) => {
             
             statNumbers.forEach((stat, index) => {
                 setTimeout(() => {
-                    animateCounter(stat, targets[index]);
+                    // animateCounter(stat, targets[index]);
                 }, index * 200);
             });
             
