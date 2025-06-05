@@ -88,10 +88,10 @@ function animateCounter(element, target, duration = 2000) {
     function updateCounter() {
         start += increment;
         if (start < target) {
-            element.textContent = Math.floor(start) + (target > 10 ? '+' : '');
+            element.textContent = Math.floor(start) + (target >= 5 ? '+' : '');
             requestAnimationFrame(updateCounter);
         } else {
-            element.textContent = target + (target > 10 ? '+' : '');
+            element.textContent = target + (target >= 5 ? '+' : '');
         }
     }
     updateCounter();
