@@ -269,6 +269,116 @@
             margin-top: 0.5rem;
         }
         
+        /* Slideshow Styles */
+        .slideshow-section {
+            background: white;
+            position: relative;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .slide {
+            display: none;
+            position: relative;
+        }
+        
+        .slide.active {
+            display: block;
+            animation: fadeSlide 1s ease;
+        }
+        
+        @keyframes fadeSlide {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            color: white;
+            padding: 2rem;
+        }
+        
+        .slide-caption h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .slide-caption p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+        
+        .slide-btn {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        
+        .slide-btn:hover {
+            background: rgba(255,255,255,0.5);
+            transform: scale(1.1);
+        }
+        
+        .slide-dots {
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .dot.active {
+            background-color: #4a90e2;
+            width: 30px;
+            border-radius: 6px;
+        }
+        
+        .dot:hover {
+            background-color: #888;
+        }
+        
         .experience-grid {
             display: grid;
             gap: 2rem;
@@ -841,6 +951,76 @@
                     <div class="stat-number">3</div>
                     <div class="stat-label">Major Flood Events Analyzed</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section id="slideshow" class="section slideshow-section">
+        <div class="container">
+            <h2 class="section-title">Research Highlights</h2>
+            <p class="section-subtitle">Visual journey through my key research projects and achievements</p>
+            
+            <div class="slideshow-container reveal">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="research1.jpg" alt="NASA RAIN Project">
+                    <div class="slide-caption">
+                        <h3>NASA RAIN Project</h3>
+                        <p>Hybrid Physics-AI model achieving 7.5× performance improvement over operational weather models</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="research2.jpg" alt="Tennessee Valley Authority Deployment">
+                    <div class="slide-caption">
+                        <h3>TVA Operational System</h3>
+                        <p>Real-time flood forecasting system protecting millions in the Tennessee Valley</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="research3.jpg" alt="Climate Modeling">
+                    <div class="slide-caption">
+                        <h3>Next-Gen Climate Modeling</h3>
+                        <p>CMIP6 analysis improving runoff projections across 30 major global watersheds</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <img src="research4.jpg" alt="SAR Flood Mapping">
+                    <div class="slide-caption">
+                        <h3>SAR-Based Flood Mapping</h3>
+                        <p>Satellite imagery analysis for rapid disaster response and damage assessment</p>
+                    </div>
+                </div>
+                
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <img src="research5.jpg" alt="Field Work">
+                    <div class="slide-caption">
+                        <h3>International Field Research</h3>
+                        <p>Climate science research and cultural immersion in South Asia</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Controls -->
+                <div class="slide-controls">
+                    <button class="slide-btn prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="slide-btn next" onclick="changeSlide(1)">❯</button>
+                </div>
+            </div>
+            
+            <!-- Dots Navigation -->
+            <div class="slide-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
             </div>
         </div>
     </section>
@@ -1437,6 +1617,60 @@
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        // Slideshow functionality
+        let currentSlideIndex = 1;
+        let slideInterval;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (n > slides.length) currentSlideIndex = 1;
+            if (n < 1) currentSlideIndex = slides.length;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentSlideIndex - 1].classList.add('active');
+            dots[currentSlideIndex - 1].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            clearInterval(slideInterval);
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+            startAutoSlide();
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+            startAutoSlide();
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Start automatic slideshow
+        startAutoSlide();
+
+        // Pause slideshow when hovering over it
+        const slideshowContainer = document.querySelector('.slideshow-container');
+        if (slideshowContainer) {
+            slideshowContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            slideshowContainer.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+        }
     </script>
 </body>
 </html>
