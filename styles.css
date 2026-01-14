@@ -1082,3 +1082,92 @@ html {
     background: #047857;
     border-color: #047857;
 }
+/* Add these to your styles.css file */
+.slideshow-section {
+    background: white;
+    position: relative;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide.active {
+    display: block;
+    animation: fadeSlide 1s ease;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.slide-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.slide-btn {
+    background: rgba(255,255,255,0.3);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.slide-btn:hover {
+    background: rgba(255,255,255,0.5);
+    transform: scale(1.1);
+}
+
+.slide-dots {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: #4a90e2;
+    width: 30px;
+    border-radius: 6px;
+}
+
+.dot:hover {
+    background-color: #888;
+}
