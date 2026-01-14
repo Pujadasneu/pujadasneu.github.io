@@ -76,7 +76,7 @@
                 <div class="cta-buttons">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
                     <a href="#projects" class="btn btn-secondary">View Research</a>
-                    <a href="CV.pdf" download="CV.pdf" class="btn btn-cv">Download CV</a>
+                    <a href="Puja_Das_CV.pdf" download="Puja_Das_CV.pdf" class="btn btn-cv">Download CV</a>
                 </div>
             </div>
         </div>
@@ -700,5 +700,64 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Slideshow functionality
+        let currentSlideIndex = 1;
+        let slideInterval;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (n > slides.length) currentSlideIndex = 1;
+            if (n < 1) currentSlideIndex = slides.length;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            if (slides[currentSlideIndex - 1]) {
+                slides[currentSlideIndex - 1].classList.add('active');
+                dots[currentSlideIndex - 1].classList.add('active');
+            }
+        }
+
+        function changeSlide(n) {
+            clearInterval(slideInterval);
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+            startAutoSlide();
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+            startAutoSlide();
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                currentSlideIndex++;
+                showSlide(currentSlideIndex);
+            }, 5000);
+        }
+
+        // Wait for page to load before starting slideshow
+        window.addEventListener('load', () => {
+            startAutoSlide();
+            
+            // Pause slideshow when hovering over it
+            const slideshowContainer = document.querySelector('.slideshow-container');
+            if (slideshowContainer) {
+                slideshowContainer.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+                
+                slideshowContainer.addEventListener('mouseleave', () => {
+                    startAutoSlide();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
