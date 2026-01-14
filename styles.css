@@ -1082,9 +1082,9 @@ html {
     background: #047857;
     border-color: #047857;
 }
-/* Add these to your styles.css file */
+/* Slideshow Styles - Update these in your styles.css */
 .slideshow-section {
-    background: white;
+    background: #f8f9fa;
     position: relative;
 }
 
@@ -1095,11 +1095,13 @@ html {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: #fff;
 }
 
 .slide {
     display: none;
     position: relative;
+    width: 100%;
 }
 
 .slide.active {
@@ -1114,8 +1116,11 @@ html {
 
 .slide img {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+    display: block;
+    background: #fff;
 }
 
 .slide-controls {
@@ -1126,10 +1131,11 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
+    pointer-events: none;
 }
 
 .slide-btn {
-    background: rgba(255,255,255,0.3);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 2rem;
@@ -1138,17 +1144,18 @@ html {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s;
-    backdrop-filter: blur(5px);
+    pointer-events: all;
 }
 
 .slide-btn:hover {
-    background: rgba(255,255,255,0.5);
+    background: rgba(0, 0, 0, 0.8);
     transform: scale(1.1);
 }
 
 .slide-dots {
     text-align: center;
     padding: 1.5rem 0;
+    background: #f8f9fa;
 }
 
 .dot {
