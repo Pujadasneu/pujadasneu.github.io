@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puja Das - Hydrologist & Flood Risk Specialist</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
     <!-- Open Graph / Facebook --> 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pujadasneu.github.io/">
     <meta property="og:title" content="Puja Das - Hydrologist & Flood Risk Specialist">
-    <meta property="og:description" content="PhD hydrologist specializing in flood hazard modeling, precipitation extremes, remote sensing, and operational flood risk assessment. Developing systems that protect communities from extreme weather events.">
+    <meta property="og:description" content="PhD hydrologist specializing in flood hazard modeling, precipitation extremes, remote sensing, and operational flood risk assessment.">
     <meta property="og:image" content="https://pujadasneu.github.io/HS.jpeg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pujadasneu.github.io/">
     <meta property="twitter:title" content="Puja Das - Hydrologist & Flood Risk Specialist">
-    <meta property="twitter:description" content="PhD hydrologist specializing in flood hazard modeling, precipitation extremes, remote sensing, and operational flood risk assessment. Developing systems that protect communities from extreme weather events.">
+    <meta property="twitter:description" content="PhD hydrologist specializing in flood hazard modeling, precipitation extremes, remote sensing, and operational flood risk assessment.">
     <meta property="twitter:image" content="https://pujadasneu.github.io/HS.jpeg">
     
     <!-- Google Analytics -->
@@ -28,6 +28,736 @@
       gtag('js', new Date());
       gtag('config', 'G-FLD4GEVNW4');
     </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .navbar {
+            background: #1a1a2e;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4a90e2;
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: white;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 150px 2rem 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            color: rgba(74, 144, 226, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #4a90e2;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #4a90e2;
+        }
+        
+        .btn-secondary:hover {
+            background: #4a90e2;
+        }
+        
+        .btn-cv {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .btn-cv:hover {
+            background: #27ae60;
+        }
+        
+        .section {
+            padding: 80px 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .about {
+            background: #f8f9fa;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-text p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .experience-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .experience-date {
+            color: #4a90e2;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-company {
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .skills {
+            background: #f8f9fa;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-category i {
+            margin-right: 0.5rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-icon {
+            font-size: 3rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .publications {
+            background: #f8f9fa;
+        }
+        
+        .publication-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .publication-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-title a {
+            color: #1a1a2e;
+            text-decoration: none;
+        }
+        
+        .publication-title a:hover {
+            color: #4a90e2;
+        }
+        
+        .publication-journal {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-authors {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        .academic-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        
+        .academic-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1a1a2e;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .academic-link:hover {
+            transform: translateY(-5px);
+        }
+        
+        .academic-link i {
+            font-size: 1.5rem;
+            color: #4a90e2;
+        }
+        
+        .teaching-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .teaching-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .teaching-icon {
+            font-size: 3rem;
+            color: #4a90e2;
+        }
+        
+        .teaching-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .teaching-institution {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .teaching-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .highlight-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        .award-card {
+            border-left: 4px solid #f39c12;
+        }
+        
+        .award-tag {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .tutorials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tutorial-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tutorial-video iframe {
+            width: 100%;
+            height: 250px;
+        }
+        
+        .tutorial-content {
+            padding: 1.5rem;
+        }
+        
+        .tutorial-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tutorial-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .gis {
+            background: #f8f9fa;
+        }
+        
+        .gis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .gis-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1.5rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .gis-icon {
+            font-size: 2.5rem;
+            color: #4a90e2;
+        }
+        
+        .gis-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .gis-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .gis-type {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+        }
+        
+        .gis-date {
+            color: #666;
+        }
+        
+        .gis-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .news {
+            background: #f8f9fa;
+        }
+        
+        .news-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .news-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .news-card.featured {
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #4a90e2;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .news-icon {
+            font-size: 2.5rem;
+            color: #4a90e2;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .news-meta {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .news-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact {
+            background: #1a1a2e;
+            color: white;
+        }
+        
+        .contact .section-title {
+            color: white;
+        }
+        
+        .contact .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #4a90e2;
+        }
+        
+        .contact-item a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .footer {
+            background: #0f0f1e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .reveal {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .tutorials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .teaching-card,
+            .news-card,
+            .gis-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -56,17 +786,16 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="floating-elements">
-    <div class="floating-element" style="top: 20%; left: 10%;"><i class="fas fa-water fa-3x"></i></div>
-    <div class="floating-element" style="top: 60%; right: 15%;"><i class="fas fa-house-flood fa-2x"></i></div>
-    <div class="floating-element" style="top: 40%; right: 30%;"><i class="fas fa-chart-area fa-2x"></i></div>
-    <div class="floating-element" style="top: 70%; left: 20%;"><i class="fas fa-cloud-rain fa-2x"></i></div>
-    <div class="floating-element" style="top: 25%; right: 10%;"><i class="fas fa-satellite fa-2x"></i></div>
-    <div class="floating-element" style="top: 80%; right: 25%;"><i class="fas fa-tint fa-2x"></i></div>
-    <div class="floating-element" style="top: 15%; left: 30%;"><i class="fas fa-map fa-2x"></i></div>
-    <div class="floating-element" style="top: 50%; left: 5%;"><i class="fas fa-house-damage fa-2x"></i></div>
+            <div class="floating-element" style="top: 20%; left: 10%;"><i class="fas fa-water fa-3x"></i></div>
+            <div class="floating-element" style="top: 60%; right: 15%;"><i class="fas fa-house-flood fa-2x"></i></div>
+            <div class="floating-element" style="top: 40%; right: 30%;"><i class="fas fa-chart-area fa-2x"></i></div>
+            <div class="floating-element" style="top: 70%; left: 20%;"><i class="fas fa-cloud-rain fa-2x"></i></div>
+            <div class="floating-element" style="top: 25%; right: 10%;"><i class="fas fa-satellite fa-2x"></i></div>
+            <div class="floating-element" style="top: 80%; right: 25%;"><i class="fas fa-tint fa-2x"></i></div>
+            <div class="floating-element" style="top: 15%; left: 30%;"><i class="fas fa-map fa-2x"></i></div>
+            <div class="floating-element" style="top: 50%; left: 5%;"><i class="fas fa-house-damage fa-2x"></i></div>
         </div>
         <div class="hero-container">
             <div class="hero-content">
@@ -88,14 +817,14 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content reveal">
                 <div class="about-image">
-                    <img src="HS.jpeg" alt="Puja Das" class="profile-img">
+                    <img src="HS.jpeg" alt="Puja Das - Hydrologist and Research Fellow" class="profile-img" loading="lazy">
                 </div>
                 <div class="about-text">
-                    <p>I am a hydrologist with expertise in flood modeling, risk assessment, and operational forecasting systems. With a PhD in Interdisciplinary Engineering from Northeastern University, I specialize in combining traditional hydrologic methods with advanced AI techniques to improve flood prediction and disaster preparedness.</p>
+                    <p>I am a hydrologist with expertise in flood modeling, risk assessment, and operational forecasting systems. With a PhD in Civil and Environmental Engineering from Northeastern University, I specialize in combining traditional hydrologic methods with advanced AI techniques to improve flood prediction and disaster preparedness.</p>
                     
-                    <p>My work spans flood depth estimation using remote sensing, real-time flood forecasting for river systems. I have implemented operational systems with Tennessee Valley Authority for flood management and hydropower operations, and analyzed major flood events globally.</p>
+                    <p>My work spans flood depth estimation using remote sensing, real-time flood forecasting for river systems, and precipitation nowcasting. I have implemented operational systems with Tennessee Valley Authority for flood management and hydropower operations, and analyzed major flood events globally.</p>
                     
-                    <p>Currently serving as a Postdoctoral Research Fellow at the Institute of Experiential AI, I work at the intersection of hydrology, remote sensing, and data science to build tools that help communities prepare for and respond to flood hazards. My research has been published in Nature journals and presented to stakeholders including federal agencies, water utilities, and emergency management organizations.</p>
+                    <p>Currently serving as a Postdoctoral Research Fellow at the Institute for Experiential AI, I work at the intersection of hydrology, remote sensing, and data science to build tools that help communities prepare for and respond to flood hazards. My research has been published in Nature journals and presented to stakeholders including federal agencies, water utilities, and emergency management organizations.</p>
                 </div>
             </div>
 
@@ -115,7 +844,6 @@
             </div>
         </div>
     </section>
-    
 
     <!-- Experience Timeline -->
     <section id="experience" class="section">
@@ -126,7 +854,7 @@
                 <div class="experience-card">
                     <div class="experience-date">Feb 2025 - Present</div>
                     <h3 class="experience-title">Postdoctoral Research Fellow</h3>
-                    <div class="experience-company">Institute of Experiential AI, Northeastern University</div>
+                    <div class="experience-company">Institute for Experiential AI, Northeastern University</div>
                     <p class="experience-description">Leading advanced research in AI applications for weather, climate and hydrologic forecasting.</p>
                     <p class="experience-description">Leading the WEAVE project science team and developing operational flood forecasting systems with TVA. Coordinating multi-institutional collaborations and translating research into practical applications.</p>
                 </div>
@@ -169,7 +897,6 @@
                         <li>R</li>
                         <li>SQL</li>
                         <li>VBA</li>
-                                                
                     </ul>
                 </div>
 
@@ -188,7 +915,6 @@
                         <li>ArcGIS Pro</li>
                         <li>QGIS</li>
                         <li>Google Earth Engine</li>
-                        
                     </ul>
                 </div>
 
@@ -221,35 +947,36 @@
     </section>
 
     <!-- Research Projects -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2 class="section-title">Research Projects</h2>
-        <div class="projects-grid reveal">
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fas fa-cloud-rain"></i>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Research Projects</h2>
+            <div class="projects-grid reveal">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3 class="project-title">RAIN Project</h3>
+                    <p class="project-description">Remote-sensing data driven Artificial Intelligence for precipitation-Nowcasting. Developing hybrid physics-ML methodologies for intense orographic precipitation prediction in Appalachia.</p>
+                    <div class="project-tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Remote Sensing</span>
+                        <span class="tag">Climate Science</span>
+                    </div>
                 </div>
-                <h3 class="project-title">RAIN Project</h3>
-                <p class="project-description">Remote-sensing data driven Artificial Intelligence for precipitation-Nowcasting. Developing hybrid physics-ML methodologies for intense orographic precipitation prediction in Appalachia.</p>
-                <div class="project-tags">
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Remote Sensing</span>
-                    <span class="tag">Climate Science</span>
+                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="project-title">WEAVE Project</h3>
+                    <p class="project-description">Weather Ensemble Analytics and Visualization Environment - Leading science team developing advanced ensemble weather analytics and visualization tools for enhanced decision-making in weather-sensitive operations.</p>
+                    <div class="project-tags">
+                        <span class="tag">Ensemble Analytics</span>
+                        <span class="tag">Visualization</span>
+                        <span class="tag">Decision Support</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3 class="project-title">WEAVE Project</h3>
-                <p class="project-description">Weather Ensemble Analytics and Visualization Environment - Leading science team developing advanced ensemble weather analytics and visualization tools for enhanced decision-making in weather-sensitive operations.</p>
-                <div class="project-tags">
-                    <span class="tag">Ensemble Analytics</span>
-                    <span class="tag">Visualization</span>
-                    <span class="tag">Decision Support</span>
-                </div>
-            </div>
+
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-city"></i>
@@ -315,7 +1042,7 @@
                     <div class="publication-authors">Das, P., Ganguly, A., Rabb, N., Smith, K., Islam, S.</div>
                 </div>
 
-               <div class="publication-item">
+                <div class="publication-item">
                     <div class="publication-title"><a href="https://www.nature.com/articles/s41612-025-01208-4" target="_blank">Non-linear dynamical approaches for multi-sector climate resilience under irreducible uncertainty</a></div>
                     <div class="publication-journal">npj Climate and Atmospheric Science 8, no. 1 (2025): 329</div>
                     <div class="publication-authors">Mawalagedara, R., Ray, A., Das, P., Watson, J., Pal, A., Duffy, K., Bhatia, U., Aldrich, D., Ganguly, A.</div>
@@ -334,107 +1061,101 @@
             </div>
         </div>
     </section>
-   <section id="teaching" class="section teaching">
-    <div class="container">
-        <h2 class="section-title">Teaching & Mentorship</h2>
-    
-        <div class="teaching-grid reveal">
-            
-            <!-- University Teaching -->
-            <div class="teaching-card">
-                <div class="teaching-icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section teaching">
+        <div class="container">
+            <h2 class="section-title">Teaching & Mentorship</h2>
+        
+            <div class="teaching-grid reveal">
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="teaching-content">
+                        <h3 class="teaching-title">University-Level Instruction</h3>
+                        <div class="teaching-institution">Northeastern University | 2020-2024</div>
+                        <p class="teaching-description">Served as a teaching assistant and delivered guest lectures as well as contributed to curriculum development. Courses include Climate Science Engineering Adaptation and Policy, Time Series and Geospatial Data Sciences, Probability and Engineering Economy for Civil Engineering and Critical Infrastructure Resilience.</p>
+                        
+                        <div class="teaching-highlights">
+                            <span class="highlight-tag">Guest Lectures</span>
+                            <span class="highlight-tag">Curriculum Development</span>
+                            <span class="highlight-tag">Tutorial Design</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="teaching-content">
-                    <h3 class="teaching-title">University-Level Instruction</h3>
-                    <div class="teaching-institution">Northeastern University | 2020-2024</div>
-                    <p class="teaching-description">Served as a teaching assistant and delivered guest lectures as well as contributed to curriculum development. Courses include Climate Science Engineering Adaptation and Policy, Time Series and Geospatial Data Sciences, Probability and Engineering Economy for Civil
-Engineering and Critical Infrastructure Resilience.</p>
-                    
-                    <div class="teaching-highlights">
-                        <span class="highlight-tag">Guest Lectures</span>
-                        <span class="highlight-tag">Curriculum Development</span>
-                        <span class="highlight-tag">Tutorial Design</span>
+
+                <div class="teaching-card award-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="teaching-content">
+                        <h3 class="teaching-title">Outstanding PhD Student Award for Teaching</h3>
+                        <div class="teaching-institution">Northeastern University | 2023</div>
+                        <p class="teaching-description">Recognized for exceptional contributions to teaching and academic support, including conducting interactive tutorials, providing one-on-one student guidance, and fostering collaborative learning environments.</p>
+                        
+                        <div class="teaching-highlights">
+                            <span class="highlight-tag award-tag">Award Winner</span>
+                            <span class="highlight-tag">Student Mentoring</span>
+                            <span class="highlight-tag">Academic Excellence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class="teaching-content">
+                        <h3 class="teaching-title">Study Abroad Program Coordinator</h3>
+                        <div class="teaching-institution">Dialogue of Civilizations | 2023-2024</div>
+                        <p class="teaching-description">Coordinated international study programs in India and Nepal, designing orientation sessions, managing logistics, and facilitating cultural immersion activities for undergraduate students.</p>
+                        
+                        <div class="teaching-highlights">
+                            <span class="highlight-tag">International Programs</span>
+                            <span class="highlight-tag">Cultural Immersion</span>
+                            <span class="highlight-tag">Program Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="teaching-content">
+                        <h3 class="teaching-title">Student Mentorship & Outreach</h3>
+                        <div class="teaching-institution">Multi-level Mentoring | 2021-2024</div>
+                        <p class="teaching-description">Mentored PhD students, undergraduates, and high school students in machine learning, climate modeling, and research methodology. Conducted specialized tutorials for students at Tufts University.</p>
+                        
+                        <div class="teaching-highlights">
+                            <span class="highlight-tag">PhD Mentoring</span>
+                            <span class="highlight-tag">K-12 Outreach</span>
+                            <span class="highlight-tag">Research Training</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="teaching-content">
+                        <h3 class="teaching-title">Professional Training & Workshops</h3>
+                        <div class="teaching-institution">Various Institutions | 2023-2024</div>
+                        <p class="teaching-description">Assisted in developing AI for Science course materials at Northwestern University and conducted Earth System Model data analysis tutorials, enhancing understanding of complex climate science concepts.</p>
+                        
+                        <div class="teaching-highlights">
+                            <span class="highlight-tag">Workshop Leader</span>
+                            <span class="highlight-tag">Professional Development</span>
+                            <span class="highlight-tag">Technical Training</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Outstanding Teaching Award -->
-            <div class="teaching-card award-card">
-                <div class="teaching-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <div class="teaching-content">
-                    <h3 class="teaching-title">Outstanding PhD Student Award for Teaching</h3>
-                    <div class="teaching-institution">Northeastern University | 2023</div>
-                    <p class="teaching-description">Recognized for exceptional contributions to teaching and academic support, including conducting interactive tutorials, providing one-on-one student guidance, and fostering collaborative learning environments.</p>
-                    
-                    <div class="teaching-highlights">
-                        <span class="highlight-tag award-tag">Award Winner</span>
-                        <span class="highlight-tag">Student Mentoring</span>
-                        <span class="highlight-tag">Academic Excellence</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Study Abroad Coordination -->
-            <div class="teaching-card">
-                <div class="teaching-icon">
-                    <i class="fas fa-globe-asia"></i>
-                </div>
-                <div class="teaching-content">
-                    <h3 class="teaching-title">Study Abroad Program Coordinator</h3>
-                    <div class="teaching-institution">Dialogue of Civilizations | 2023-2024</div>
-                    <p class="teaching-description">Coordinated international study programs in India and Nepal, designing orientation sessions, managing logistics, and facilitating cultural immersion activities for undergraduate students.</p>
-                    
-                    <div class="teaching-highlights">
-                        <span class="highlight-tag">International Programs</span>
-                        <span class="highlight-tag">Cultural Immersion</span>
-                        <span class="highlight-tag">Program Management</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mentorship & Outreach -->
-            <div class="teaching-card">
-                <div class="teaching-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="teaching-content">
-                    <h3 class="teaching-title">Student Mentorship & Outreach</h3>
-                    <div class="teaching-institution">Multi-level Mentoring | 2021-2024</div>
-                    <p class="teaching-description">Mentored PhD students, undergraduates, and high school students in machine learning, climate modeling, and research methodology. Conducted specialized tutorials for students at Tufts University.</p>
-                    
-                    <div class="teaching-highlights">
-                        <span class="highlight-tag">PhD Mentoring</span>
-                        <span class="highlight-tag">K-12 Outreach</span>
-                        <span class="highlight-tag">Research Training</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professional Training -->
-            <div class="teaching-card">
-                <div class="teaching-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="teaching-content">
-                    <h3 class="teaching-title">Professional Training & Workshops</h3>
-                    <div class="teaching-institution">Various Institutions | 2023-2024</div>
-                    <p class="teaching-description">Assisted in developing AI for Science course materials at Northwestern University and conducted Earth System Model data analysis tutorials, enhancing understanding of complex climate science concepts.</p>
-                    
-                    <div class="teaching-highlights">
-                        <span class="highlight-tag">Workshop Leader</span>
-                        <span class="highlight-tag">Professional Development</span>
-                        <span class="highlight-tag">Technical Training</span>
-                    </div>
-                </div>
-            </div>
-
-           
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- YouTube Tutorials -->
     <section id="tutorials" class="section">
         <div class="container">
@@ -446,9 +1167,9 @@ Engineering and Critical Infrastructure Resilience.</p>
                         <iframe src="https://www.youtube.com/embed/WYLfygm-VnQ" title="Climate Data Analysis Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="tutorial-content">
-                        <h3 class="tutorial-title">Earth System Model Data Visualizationa and Analysis Tutorial</h3>
+                        <h3 class="tutorial-title">Earth System Model Data Visualization and Analysis Tutorial</h3>
                         <p class="tutorial-description">Learn how to analyze climate data using Python and various data science techniques.</p>
-                        <a href="https://www.youtube.com/watch?v=WYLfygm-VnQ&ab_channel=SDSLab-NortheasternU." target="_blank" class="tutorial-link">Watch on YouTube</a>
+                        <a href="https://www.youtube.com/watch?v=WYLfygm-VnQ" target="_blank" class="tutorial-link">Watch on YouTube</a>
                     </div>
                 </div>
 
@@ -459,55 +1180,52 @@ Engineering and Critical Infrastructure Resilience.</p>
                     <div class="tutorial-content">
                         <h3 class="tutorial-title">Machine Learning for Precipitation Prediction</h3>
                         <p class="tutorial-description">Explore machine learning applications in weather forecasting and climate modeling.</p>
-                        <a href="https://www.youtube.com/watch?v=6Gq3DYegK6A&ab_channel=SDSLab-NortheasternU." target="_blank" class="tutorial-link">Watch on YouTube</a>
+                        <a href="https://www.youtube.com/watch?v=6Gq3DYegK6A" target="_blank" class="tutorial-link">Watch on YouTube</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-   <section id="gis" class="section gis">
-    <div class="container">
-        <h2 class="section-title">GIS Story Maps & Dashboards</h2>
-        
 
-        <div class="gis-grid reveal">
-            
-            <div class="gis-card">
-                <div class="gis-icon">
-                    <i class="fas fa-map-marked-alt"></i>
-                </div>
-                <div class="gis-content">
-                    <h3 class="gis-title">Rising Sea Level, Boston Underwater</h3>
-                    <p class="gis-description">Understanding different sea level rise scenarios in Boston's neighborhoods.</p>
-                    <div class="gis-meta">
-                        <span class="gis-type">ArcGIS StoryMap</span>
-                        <span class="gis-date">2020</span>
+    <!-- GIS Section -->
+    <section id="gis" class="section gis">
+        <div class="container">
+            <h2 class="section-title">GIS Story Maps & Dashboards</h2>
+
+            <div class="gis-grid reveal">
+                <div class="gis-card">
+                    <div class="gis-icon">
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
-                    <a href="https://storymaps.arcgis.com/stories/32cfb90449e347038ee2a97fcfcba9f3" target="_blank" class="gis-link">View Story Map</a>
+                    <div class="gis-content">
+                        <h3 class="gis-title">Rising Sea Level, Boston Underwater</h3>
+                        <p class="gis-description">Understanding different sea level rise scenarios in Boston's neighborhoods.</p>
+                        <div class="gis-meta">
+                            <span class="gis-type">ArcGIS StoryMap</span>
+                            <span class="gis-date">2020</span>
+                        </div>
+                        <a href="https://storymaps.arcgis.com/stories/32cfb90449e347038ee2a97fcfcba9f3" target="_blank" class="gis-link">View Story Map</a>
+                    </div>
+                </div>
+
+                <div class="gis-card">
+                    <div class="gis-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <div class="gis-content">
+                        <h3 class="gis-title">Hydropower Plants in US</h3>
+                        <p class="gis-description">Information about power generation along with temperature and precipitation in 2003-2020.</p>
+                        <div class="gis-meta">
+                            <span class="gis-type">Interactive Dashboard</span>
+                            <span class="gis-date">2021</span>
+                        </div>
+                        <a href="https://nu.maps.arcgis.com/apps/dashboards/6c8389961cb5429184925fd7ad145287" target="_blank" class="gis-link">View Dashboard</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="gis-card">
-                <div class="gis-icon">
-                    <i class="fas fa-chart-area"></i>
-                </div>
-                <div class="gis-content">
-                    <h3 class="gis-title">Hydropower Plants in US</h3>
-                    <p class="gis-description">Information about power generation along with temperature and precipitation in 2003-2020.</p>
-                    <div class="gis-meta">
-                        <span class="gis-type">Interactive Dashboard</span>
-                        <span class="gis-date">2021</span>
-                    </div>
-                    <a href="https://nu.maps.arcgis.com/apps/dashboards/6c8389961cb5429184925fd7ad145287" target="_blank" class="gis-link">View Dashboard</a>
-                </div>
-            </div>
-
-            
-
-
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- In the News -->
     <section id="news" class="section news">
         <div class="container">
@@ -515,7 +1233,6 @@ Engineering and Critical Infrastructure Resilience.</p>
             <p class="section-subtitle">Media coverage of my research and achievements</p>
 
             <div class="news-grid reveal">
-                <!-- FEATURED STUDENT SPOTLIGHT -->
                 <div class="news-card featured">
                     <div class="badge">FEATURED</div>
                     <div class="news-icon">
@@ -532,30 +1249,28 @@ Engineering and Critical Infrastructure Resilience.</p>
                     </div>
                 </div>
 
-                <!-- EARTH.COM ARTICLE -->
                 <div class="news-card featured">
-                    
                     <div class="news-icon">
                         <i class="fas fa-tint"></i>
                     </div>
                     <div class="news-content">
                         <h3 class="news-title">Drying rivers could cause water shortages for 850 million people</h3>
-                        <p class="news-description">Research led by Northeastern University scientists using advanced climate models predicts that 40% of major rivers will experience reduced runoff by 2100, affecting nearly a billion people worldwide - significantly more than previously estimated.</p>
+                        <p class="news-description">Research led by Northeastern University scientists using advanced climate models predicts that 40% of major rivers will experience reduced runoff by 2100, affecting nearly a billion people worldwide.</p>
                         <div class="news-meta">
                             <span class="news-source">Earth.com</span>
                             <span class="news-date">2025</span>
                         </div>
-                        <a href="https://www.earth.com/news/drying-rivers-could-cause-water-shortages-for-850-million-people/?utm_source=dlvr.it&utm_medium=linkedin" target="_blank" class="news-link">Read Article <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://www.earth.com/news/drying-rivers-could-cause-water-shortages-for-850-million-people/" target="_blank" class="news-link">Read Article <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                 <div class="news-card featured">
-          
+
+                <div class="news-card featured">
                     <div class="news-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="news-content">
                         <h3 class="news-title">High-Level Meeting on the Midterm Review of the Sendai Framework for Disaster Risk Reduction</h3>
-                        <p class="news-description">Comprehensive coverage of the UN's midterm review of the Sendai Framework, assessing global progress in disaster risk reduction and establishing new initiatives for enhanced resilience and risk-informed sustainable development.</p>
+                        <p class="news-description">Comprehensive coverage of the UN's midterm review of the Sendai Framework, assessing global progress in disaster risk reduction.</p>
                         <div class="news-meta">
                             <span class="news-source">UNDRR</span>
                             <span class="news-date">May 17, 2023</span>
@@ -563,28 +1278,28 @@ Engineering and Critical Infrastructure Resilience.</p>
                         <a href="https://www.undrr.org/news/daily-report-17-may-2023-high-level-meeting-midterm-review-sendai-framework" target="_blank" class="news-link">Read Article <i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="news-card">
                     <div class="news-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
                     <div class="news-content">
-                        <h3 class="news-title">With the help of Northeastern, Tennessee Valley Authority experiments with a new forecast model  to better predict extreme rainfalls</h3>
-                        <p class="news-description">In collaboration with a Northeastern researcher, the Tennessee Valley Authority this summer plans to test an AI-generated weather forecasting model to see if it will do a better job of predicting extreme rainfalls than traditional models.</p>
+                        <h3 class="news-title">Tennessee Valley Authority experiments with AI forecast model</h3>
+                        <p class="news-description">In collaboration with a Northeastern researcher, the Tennessee Valley Authority plans to test an AI-generated weather forecasting model to better predict extreme rainfalls.</p>
                         <div class="news-meta">
                             <span class="news-source">Northeastern University News</span>
                             <span class="news-date">July 23, 2024</span>
                         </div>
-                        <a href="https://news.northeastern.edu/2024/07/23/ai-weather-forecasts/#:~:text=In%20collaboration%20with%20a%20Northeastern,within%20a%20three%2Dhour%20period." target="_blank" class="news-link">Read Article</a>
+                        <a href="https://news.northeastern.edu/2024/07/23/ai-weather-forecasts/" target="_blank" class="news-link">Read Article</a>
                     </div>
                 </div>
+
                 <div class="news-card">
                     <div class="news-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
-                    
                     <div class="news-content">
-                        <h3 class="news-title">The short-term rain forecast system is broken. Can AI do a better job of predicting deadly floods?</h3>
+                        <h3 class="news-title">Can AI do a better job of predicting deadly floods?</h3>
                         <p class="news-description">Northeastern University researchers develop AI-powered flood prediction systems to help communities prepare for extreme weather events.</p>
                         <div class="news-meta">
                             <span class="news-source">Northeastern University News</span>
@@ -593,13 +1308,14 @@ Engineering and Critical Infrastructure Resilience.</p>
                         <a href="https://news.northeastern.edu/2023/12/04/flood-prediction-artificial-intelligence/" target="_blank" class="news-link">Read Article</a>
                     </div>
                 </div>
-                 <div class="news-card">
+
+                <div class="news-card">
                     <div class="news-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
                     <div class="news-content">
                         <h3 class="news-title">A Climate Dialogue To Remember: South Asia and the 2023 Monsoons</h3>
-                        <p class="news-description">A Dialogue of Civilizations course led by CEE Professor Auroop Ganguly traveled to India during the summer of 2023 to study climate science and engineering, adaptation and policy, data science and artificial intelligence, and cultural immersion.</p>
+                        <p class="news-description">A Dialogue of Civilizations course traveled to India during summer 2023 to study climate science, engineering, adaptation and policy.</p>
                         <div class="news-meta">
                             <span class="news-source">Northeastern University News</span>
                             <span class="news-date">October 20, 2023</span>
@@ -675,6 +1391,52 @@ Engineering and Critical Infrastructure Resilience.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = '#0f0f1e';
+            } else {
+                navbar.style.background = '#1a1a2e';
+            }
+        });
+
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
