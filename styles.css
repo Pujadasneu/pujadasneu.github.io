@@ -1082,20 +1082,22 @@ html {
     background: #047857;
     border-color: #047857;
 }
-/* Slideshow Styles - Update these in your styles.css */
+/* Slideshow Styles - Replace the slideshow section in your styles.css */
 .slideshow-section {
-    background: #f8f9fa;
+    background: white;
     position: relative;
+    padding: 60px 0;
 }
 
 .slideshow-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     background: #fff;
+    min-height: 400px;
 }
 
 .slide {
@@ -1117,10 +1119,9 @@ html {
 .slide img {
     width: 100%;
     height: auto;
-    max-height: 600px;
-    object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
     display: block;
-    background: #fff;
+    object-fit: contain;
+    max-height: none; /* Remove height restriction */
 }
 
 .slide-controls {
@@ -1132,10 +1133,11 @@ html {
     justify-content: space-between;
     padding: 0 1rem;
     pointer-events: none;
+    z-index: 10;
 }
 
 .slide-btn {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
     font-size: 2rem;
@@ -1145,17 +1147,19 @@ html {
     cursor: pointer;
     transition: all 0.3s;
     pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     transform: scale(1.1);
 }
 
 .slide-dots {
     text-align: center;
-    padding: 1.5rem 0;
-    background: #f8f9fa;
+    padding: 1.5rem 0 0 0;
 }
 
 .dot {
@@ -1177,4 +1181,17 @@ html {
 
 .dot:hover {
     background-color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .slideshow-container {
+        border-radius: 0;
+    }
+    
+    .slide-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
 }
